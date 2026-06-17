@@ -3,106 +3,92 @@
 @section('title', 'Home | DIGI-ICONICS')
 
 @section('content')
-<!-- ==========================================================================
-   02 HERO SECTION LAYOUT
-   ========================================================================== -->
-<section class="hero-section d-flex align-items-center">
-    <!-- Subtle Background Glow Gradients -->
-    <div class="glow-bg-1"></div>
-    <div class="glow-bg-2"></div>
+<section class="premium-hero">
+    <div class="ambient-flare flare-1"></div>
+    <div class="ambient-flare flare-2"></div>
 
-    <div class="container position-relative">
-        <div class="row align-items-center min-vh-100 py-5">
+    <div class="container content-container-rebalance">
+        <div class="row align-items-center min-vh-100">
 
-            <!-- Left Column: Copywriting & Stats -->
-            <div class="col-lg-6 hero-content-block mb-5 mb-lg-0">
-                <span class="badge hero-badge mb-3"><i class="fas fa-rocket me-2"></i> Next-Gen Digital Agency</span>
-                <h1 class="hero-title mb-3">
-                    Grow Your Business With <span class="text-gradient">Modern Digital</span> Solutions
+            <div class="col-lg-6 content-pillar">
+                <div class="agency-tag">
+                    <span class="tag-pulse"></span>
+                    <span class="tag-text">NEXT-GEN DIGITAL AGENCY</span>
+                </div>
+
+                <h1 class="giant-title">
+                    <div class="title-line"><span class="anim-word">Grow</span> <span class="anim-word">Your</span> <span class="anim-word">Business</span></div>
+                    <div class="title-line"><span class="anim-word">With</span> <span class="anim-word neon-gradient">Modern</span></div>
+                    <div class="title-line"><span class="anim-word neon-gradient">Digital</span> <span class="anim-word">Solutions</span></div>
                 </h1>
-                <p class="hero-description mb-4">
-                    We create high-end websites, web applications, and marketing strategies that drive measurable growth and seamless user experiences.
+
+                <p class="sub-lead">
+                    We engineer high-end web applications, immersive interfaces, and performance-driven marketing strategies tailored to scale modern enterprise brands globally.
                 </p>
 
-                <!-- CTA Action Buttons -->
-                <div class="hero-btns-group mb-5">
-                    <a href="#" class="btn btn-primary-custom me-3">Get Proposal <i class="fas fa-arrow-right ms-2"></i></a>
-                    <a href="#" class="btn btn-secondary-custom">View Portfolio</a>
+                <div class="action-trigger-group">
+                    <a href="#" class="prime-btn">
+                        <span>Get Proposal</span>
+                        <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                    <a href="#" class="ghost-btn">
+                        <span>View Portfolio</span>
+                    </a>
                 </div>
 
-                <!-- Mini Live Stats Matrix -->
-                <div class="row hero-stats-grid">
-                    <div class="col-4 stat-box">
-                        <h3 class="stat-number">150+</h3>
-                        <p class="stat-label">Projects Completed</p>
+                <div class="stat-matrix-row">
+                    <div class="matrix-box">
+                        <h2>150<span class="plus-sign">+</span></h2>
+                        <p>Projects Completed</p>
                     </div>
-                    <div class="col-4 stat-box">
-                        <h3 class="stat-number">98%</h3>
-                        <p class="stat-label">Satisfaction Rate</p>
+                    <div class="matrix-box">
+                        <h2>5<span class="plus-sign">+</span></h2>
+                        <p>Years Experience</p>
                     </div>
-                    <div class="col-4 stat-box">
-                        <h3 class="stat-number">50+</h3>
-                        <p class="stat-label">Global Clients</p>
+                    <div class="matrix-box">
+                        <h2>100<span class="plus-sign">%</span></h2>
+                        <p>Satisfaction Rate</p>
+                    </div>
+                    <div class="matrix-box">
+                        <h2>50<span class="plus-sign">+</span></h2>
+                        <p>Global Clients</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Column: Interactive Animated Floating Tech Stack -->
-         <div class="col-lg-6 position-relative d-flex justify-content-center align-items-center hero-animation-block">
-    <div class="animation-container-wrapper">
-        <div class="central-orb"></div>
+            <div class="col-lg-6 dynamic-visual-pillar">
+                <div class="cyber-orbital-system">
+                    <div class="reference-ring ring-lg"></div>
+                    <div class="reference-ring ring-md"></div>
+                    <div class="reference-ring ring-sm"></div>
+                    {{-- <div class="orbiting-dot"></div> --}}
 
-        <div class="floating-tech-card tech-laravel">
-            <div class="card-icon-box bg-dev-soft">
-                <i class="fas fa-code text-indigo"></i>
-            </div>
-            <div class="card-info">
-                <h6>Web Dev</h6>
-                <p>Fast & Scalable</p>
-            </div>
-        </div>
+                    <div class="premium-glass-card glass-web">
+                        <div class="glass-icon-shield sh-web"><i class="fas fa-code"></i></div>
+                        <div class="glass-meta"><h5>Web Dev</h5><p>Fast & Scalable</p></div>
+                    </div>
 
-        <div class="floating-tech-card tech-php">
-            <div class="card-icon-box bg-marketing-soft">
-                <i class="fas fa-chart-line text-warning"></i>
-            </div>
-            <div class="card-info">
-                <h6>Digital Marketing</h6>
-                <p>Maximize ROI</p>
-            </div>
-        </div>
+                    <div class="premium-glass-card glass-marketing">
+                        <div class="glass-icon-shield sh-marketing"><i class="fas fa-chart-line"></i></div>
+                        <div class="glass-meta"><h5>Marketing</h5><p>Maximize ROI</p></div>
+                    </div>
 
-        <div class="floating-tech-card tech-uiux">
-            <div class="card-icon-box bg-app-soft">
-                <i class="fas fa-mobile-alt text-purple"></i>
-            </div>
-            <div class="card-info">
-                <h6>App Dev</h6>
-                <p>iOS & Android</p>
-            </div>
-        </div>
+                    <div class="premium-glass-card glass-app">
+                        <div class="glass-icon-shield sh-app"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="glass-meta"><h5>App Dev</h5><p>iOS & Android</p></div>
+                    </div>
 
-        <div class="floating-tech-card tech-seo">
-            <div class="card-icon-box bg-seo-soft">
-                <i class="fas fa-search text-success"></i>
-            </div>
-            <div class="card-info">
-                <h6>SEO Services</h6>
-                <p>Dominate Search</p>
-            </div>
-        </div>
+                    <div class="premium-glass-card glass-seo">
+                        <div class="glass-icon-shield sh-seo"><i class="fas fa-search"></i></div>
+                        <div class="glass-meta"><h5>SEO Growth</h5><p>Dominate Search</p></div>
+                    </div>
 
-        <div class="floating-tech-card tech-marketing">
-            <div class="card-icon-box bg-social-soft">
-                <i class="fas fa-bullhorn text-pink"></i>
+                    <div class="premium-glass-card glass-social">
+                        <div class="glass-icon-shield sh-social"><i class="fas fa-bullhorn"></i></div>
+                        <div class="glass-meta"><h5>Social Media</h5><p>Strategic Ads</p></div>
+                    </div>
+                </div>
             </div>
-            <div class="card-info">
-                <h6>Social Media</h6>
-                <p>Strategic Ads</p>
-            </div>
-        </div>
-    </div>
-</div>
 
         </div>
     </div>

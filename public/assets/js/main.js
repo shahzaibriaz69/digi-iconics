@@ -1,16 +1,57 @@
 // ==========================================================================
-// 02 HERO SECTION - ULTRA-SMOOTH LIQUID PHYSICS FLOATING ENGINE
+// DIGI-ICONICS 3D CINEMATIC EDGE-TO-EDGE INTRO GRAPHICS ENGINE
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", function () {
-
     if (typeof gsap !== "undefined") {
 
-        // Pure page par perspective set karein taake 3D rotation natural lage
-        gsap.set(".animation-container-wrapper", { perspective: 1000 });
+        const screenWidth = window.innerWidth;
+        const entryOffset = screenWidth > 1200 ? screenWidth * 0.6 : 800;
 
-        // Function: Har card ko organic, random aur super-smooth drift dene ke liye
+        gsap.set(".content-pillar, .cyber-orbital-system", { clearProps: "all" });
+
+
+        gsap.set(".content-pillar", { perspective: 1000, transformStyle: "preserve-3d" });
+        gsap.set(".cyber-orbital-system", { perspective: 1500, transformStyle: "preserve-3d" });
+
+
+        const cinematicTimeline = gsap.timeline();
+
+        cinematicTimeline.from(".content-pillar", {
+            x: -entryOffset,
+            opacity: 0,
+            duration: 1.6,
+            ease: "power4.out"
+        });
+
+        cinematicTimeline.from(".cyber-orbital-system", {
+            x: entryOffset,
+            rotationY: -45,
+            skewX: 5,
+            opacity: 0,
+            duration: 1.8,
+            ease: "power4.out"
+        }, "-=1.4");
+
+
+        cinematicTimeline.to(".anim-word", {
+            y: "0%",
+            opacity: 1,
+            duration: 1.0,
+            stagger: 0.05,
+            ease: "power3.out"
+        }, "-=0.8");
+
+
+        cinematicTimeline.from(".reference-ring, .core-nebula", {
+            opacity: 0,
+            scale: 0.5,
+            duration: 1.2,
+            stagger: 0.1,
+            ease: "power2.out"
+        }, "-=1.0");
+
+
         function applyPremiumFloat(element, xMax, yMax, rMax, duration) {
-            // Horizontal Dynamic Drift
             gsap.to(element, {
                 x: `random(${-xMax}, ${xMax})`,
                 duration: duration,
@@ -19,16 +60,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 ease: "sine.inOut"
             });
 
-            // Vertical Liquid Floating
             gsap.to(element, {
                 y: `random(${-yMax}, ${yMax})`,
-                duration: duration * 1.2,
+                duration: duration * 1.25,
                 repeat: -1,
                 yoyo: true,
                 ease: "sine.inOut"
             });
 
-            // 3D Rotation Shift (Slick Micro-Interaction)
             gsap.to(element, {
                 rotationZ: `random(${-rMax}, ${rMax})`,
                 rotationY: `random(${-rMax * 1.5}, ${rMax * 1.5})`,
@@ -39,14 +78,21 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        // ==========================================================================
-        // EACH CARD GETS UNIQUE PHYSICS DYNAMICS (X-Drift, Y-Drift, 3D-Rot, Speed)
-        // ==========================================================================
-        applyPremiumFloat(".tech-laravel", 15, 25, 4, 4.5);
-        applyPremiumFloat(".tech-php", 20, 18, 5, 5.2);
-        applyPremiumFloat(".tech-uiux", 12, 28, 3, 4.8);
-        applyPremiumFloat(".tech-seo", 18, 22, 4, 5.5);
-        applyPremiumFloat(".tech-marketing", 10, 15, 3, 4.2);
 
+        applyPremiumFloat(".glass-web", 12, 20, 3, 4.2);
+        applyPremiumFloat(".glass-app", 15, 16, 4, 4.8);
+        applyPremiumFloat(".glass-social", 8, 10, 2, 5.5);
+        applyPremiumFloat(".glass-marketing", 16, 18, 4, 5.0);
+        applyPremiumFloat(".glass-seo", 14, 15, 3, 4.6);
+
+        gsap.to(".orbiting-dot", {
+            motionPath: {
+                path: [{x: 0, y: -220}, {x: 220, y: 0}, {x: 0, y: 220}, {x: -220, y: 0}, {x: 0, y: -220}],
+                curviness: 1.5
+            },
+            duration: 12,
+            repeat: -1,
+            ease: "none"
+        });
     }
 });
