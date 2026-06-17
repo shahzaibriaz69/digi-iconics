@@ -96,3 +96,40 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+// ==========================================================================
+        // 6. SERVICES GRID SCROLLTRIGGER CINEMATIC EFFECT
+        // ==========================================================================
+        if (typeof ScrollTrigger !== "undefined") {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Header Elements Pop In
+            gsap.from(".service-header-trigger > *", {
+                scrollTrigger: {
+                    trigger: ".service-header-trigger",
+                    start: "top 85%",
+                    toggleActions: "play none none none"
+                },
+                y: 40,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+
+            // 3D Stagger Fluid Entry for the Pillar Cards
+            gsap.from(".service-pillar-block", {
+                scrollTrigger: {
+                    trigger: ".services-grid-trigger",
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                },
+                y: 80,
+                rotationX: 15,
+                opacity: 0,
+                duration: 1.4,
+                stagger: 0.2,
+                ease: "power4.out"
+            });
+        }
