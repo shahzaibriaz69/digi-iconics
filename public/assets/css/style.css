@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Premium Palette (Dark & Vibrant Blue/Cyan Aesthetic) */
+    --primary: #2563EB;
+    /* Vibrant Electric Blue */
+    --secondary: #0F172A;
+    /* Deep Slate / Navy Dark */
+    --accent: #F59E0B;
+    /* Golden Accent for highlights */
+    --white: #ffffff;
+    --light: #F8FAFC;
+    /* Very Light grayish blue for alternate sections */
+    --text-dark: #1E293B;
+    /* Dark text for light backgrounds */
+    --text-light: #94A3B8;
+    /* Muted gray text for dark backgrounds */
+
+    /* Fonts */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* Base Reset & Smooth Scroll */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary);
+    /* Default theme starts premium dark */
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+/* Heading Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--white);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   01 NAVBAR & MEGA MENU STYLING
+   ========================================================================== */
+.custom-navbar {
+    background: rgba(15, 23, 42, 0.9);
+    /* Deep Slate with glass opacity */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 16px 0;
+    transition: all 0.4s ease;
+    z-index: 1050;
+}
+
+/* Logo Design */
+.logo-text {
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
+.logo-text span {
+    color: var(--primary);
+}
+
+/* Nav Links Styling */
+.custom-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 16px !important;
+    position: relative;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    color: var(--white) !important;
+}
+
+/* Micro-interaction Line under Links */
+.custom-navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 16px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active::after {
+    width: calc(100% - 32px);
+}
+
+/* Dropdown Arrow Icon */
+.style-icon {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.custom-navbar .dropdown:hover .style-icon {
+    transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   MEGA MENU CORE DESIGN
+   ========================================================================== */
+.has-mega-menu {
+    position: static !important;
+}
+
+.custom-navbar .mega-menu-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #0b1120;
+    /* Slightly darker than secondary for contrast */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Show Mega Menu on Desktop Hover */
+@media (min-width: 992px) {
+    .has-mega-menu:hover .mega-menu-wrapper {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mega-title {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    border-left: 3px solid var(--primary);
+    padding-left: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.custom-navbar .dropdown-item {
+    color: var(--text-light) !important;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: transparent !important;
+}
+
+.custom-navbar .dropdown-item:hover {
+    color: var(--white) !important;
+    background: rgba(37, 99, 235, 0.08) !important;
+    padding-left: 20px;
+}
+
+.ref-icon {
+    width: 24px;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+/* Text Colors for Custom Brand Icons */
+.text-purple {
+    color: #a855f7;
+}
+
+/* ==========================================================================
+   GET PROPOSAL BUTTON STYLING
+   ========================================================================== */
+.btn-proposal {
+    background: var(--primary);
+    color: var(--white) !important;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 26px !important;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.btn-proposal:hover {
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary) !important;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.5);
+}
+
+/* Mobile Toggle Hamburger Icon */
+.custom-toggler {
+    border: none !important;
+    outline: none !important;
+    color: var(--white);
+    font-size: 1.3rem;
+    padding: 4px 8px;
+}
+
+/* ==========================================================================
+   02 FOOTER STYLING
+   ========================================================================== */
+.custom-footer {
+    background: #0b1120;
+    /* Ultra dark variant background */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 80px;
+    position: relative;
+}
+
+.footer-top {
+    padding-bottom: 50px;
+}
+
+.footer-brand {
+    display: inline-block;
+}
+
+.footer-desc {
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Social Media Circular Icons */
+.footer-socials .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-right: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-socials .social-icon:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+}
+
+/* Column Headers */
+.footer-title {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Small neon line under headers */
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+/* Link Columns Custom Alignment and Hovers */
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+}
+
+.footer-links li a:hover {
+    color: var(--white);
+    padding-left: 6px;
+}
+
+/* Contact Grid info */
+.footer-contact {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+}
+
+.contact-icon {
+    color: var(--primary);
+    margin-right: 12px;
+    margin-top: 4px;
+    font-size: 1rem;
+    width: 16px;
+    text-align: center;
+}
+
+/* Footer Bottom Strip */
+.footer-bottom {
+    background: #070b14;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 24px 0;
+}
+
+.copyright-text {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: rgba(148, 163, 184, 0.6);
+}
+
+.footer-bottom-links {
+    list-style: none;
+    padding-left: 0;
+    display: inline-flex;
+}
+
+.footer-bottom-links li {
+    margin-left: 20px;
+}
+
+.footer-bottom-links li a {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: rgba(148, 163, 184, 0.6);
+}
+
+.footer-bottom-links li a:hover {
+    color: var(--white);
+}
+
+/* ==========================================================================
+   02 HERO SECTION STYLING
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    background-color: var(--secondary);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Background Cyber Orbs/Glows */
+.glow-bg-1 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    top: -10%;
+    left: -10%;
+    z-index: -1;
+}
+
+.glow-bg-2 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    bottom: -10%;
+    right: -5%;
+    z-index: -1;
+}
+
+/* Badge Alert */
+.hero-badge {
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    color: #60a5fa;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Typography Extensions */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    max-width: 540px;
+}
+
+/* Action Custom Buttons */
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--primary) 0%, #1d4ed8 100%);
+    color: var(--white) !important;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
+}
+
+.btn-secondary-custom {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white) !important;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 12px;
+}
+
+.btn-secondary-custom:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mini Stats Layout */
+.hero-stats-grid .stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 2px;
+}
+
+.hero-stats-grid .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+.stat-box {
+    border-left: 2px solid rgba(255, 255, 255, 0.05);
+    padding-left: 20px;
+}
+
+.hero-stats-grid .stat-box:first-child {
+    border-left: none;
+    padding-left: 12px;
+}
+
+/* ==========================================================================
+   ANIMATION INTERACTION OBJECT MATRIX
+   ========================================================================== */
+.animation-container-wrapper {
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+.central-orb {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+/* Premium Floating Tech Cards Core Layout */
+.floating-tech-card {
+    position: absolute;
+    background: rgba(30, 41, 59, 0.7);
+    /* Frosted Glass Layer */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px 20px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    width: 200px;
+    z-index: 2;
+}
+
+.card-icon-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-right: 14px;
+}
+
+.card-info h6 {
+    font-size: 0.95rem;
+    margin-bottom: 1px;
+    font-weight: 600;
+}
+
+.card-info p {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+/* Soft Icon Background Colors */
+.bg-dev-soft {
+    background: rgba(99, 102, 241, 0.12);
+}
+
+.text-indigo {
+    color: #818cf8;
+}
+
+.bg-marketing-soft {
+    background: rgba(245, 158, 11, 0.12);
+}
+
+.text-warning {
+    color: #fbbf24;
+}
+
+.bg-app-soft {
+    background: rgba(168, 85, 247, 0.12);
+}
+
+.text-purple {
+    color: #c084fc;
+}
+
+.bg-seo-soft {
+    background: rgba(34, 197, 94, 0.12);
+}
+
+.text-success {
+    color: #4ade80;
+}
+
+.bg-social-soft {
+    background: rgba(236, 72, 153, 0.12);
+}
+
+.text-pink {
+    color: #f472b6;
+}
+
+/* Structural Floating Positions Relative to Center Axis */
+.tech-laravel {
+    top: 15%;
+    left: 10%;
+}
+
+.tech-php {
+    top: 65%;
+    left: 5%;
+}
+
+.tech-uiux {
+    top: 5%;
+    right: 10%;
+}
+
+.tech-seo {
+    bottom: 10%;
+    right: 12%;
+}
+
+.tech-marketing {
+    top: 42%;
+    left: 45%;
+    width: 180px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 2.6rem;
+    }
+
+    .animation-container-wrapper {
+        height: 380px;
+        margin-top: 30px;
+    }
+
+    .floating-tech-card {
+        width: 170px;
+        padding: 10px 14px;
+    }
+
+    .tech-laravel {
+        top: 10%;
+        left: 5%;
+    }
+
+    .tech-uiux {
+        top: 0%;
+        right: 5%;
+    }
+}
