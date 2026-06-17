@@ -133,3 +133,63 @@ document.addEventListener("DOMContentLoaded", function () {
                 ease: "power4.out"
             });
         }
+
+        if (typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Heading Smooth Popup (Exactly triggers your class)
+    gsap.from(".service-header-trigger", {
+        scrollTrigger: {
+            trigger: ".service-header-trigger",
+            start: "top 85%",
+            toggleActions: "play none none none"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+    });
+
+    // 2. Left Card (Development) -> Fly in from absolute Left
+    gsap.from(".services-grid-trigger .service-pillar-block:nth-child(1)", {
+        scrollTrigger: {
+            trigger: ".services-grid-trigger",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        },
+        x: -150,
+        rotationY: 25,
+        opacity: 0,
+        duration: 1.4,
+        ease: "power4.out"
+    });
+
+    // 3. Center Card (Marketing & SEO) -> Move straight up from Bottom
+    gsap.from(".services-grid-trigger .service-pillar-block:nth-child(2)", {
+        scrollTrigger: {
+            trigger: ".services-grid-trigger",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        },
+        y: 150,
+        rotationX: -20,
+        opacity: 0,
+        duration: 1.4,
+        ease: "power4.out"
+    });
+
+    // 4. Right Card (Creative Studio) -> Fly in from absolute Right
+    gsap.from(".services-grid-trigger .service-pillar-block:nth-child(3)", {
+        scrollTrigger: {
+            trigger: ".services-grid-trigger",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        },
+        x: 150,
+        rotationY: -25,
+        opacity: 0,
+        duration: 1.4,
+        ease: "power4.out"
+    });
+}
+

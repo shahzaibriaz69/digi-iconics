@@ -187,6 +187,15 @@
                 </div>
 
             </div>
+
+            <div class="row mt-5 text-center">
+                <div class="col-12">
+                    <a href="/services" class="btn btn-outline-info px-5 py-3"
+                        style="border-radius: 30px; font-weight: 600; letter-spacing: 1px;">
+                        VIEW ALL SERVICES <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
