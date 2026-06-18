@@ -114,6 +114,8 @@
         </div>
     </section>
 
+
+
     <section class="premium-services-section py-5">
         <div class="ambient-flare flare-services"></div>
 
@@ -195,6 +197,82 @@
                         VIEW ALL SERVICES <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="premium-whychoose-section py-5">
+        <div class="ambient-flare flare-whychoose"></div>
+
+        <div class="container py-5">
+            <div class="row mb-5 text-center justify-content-center whychoose-header-trigger">
+                <div class="col-lg-7">
+                    <div class="agency-tag mx-auto mb-3">
+                        <span class="tag-pulse"></span>
+                        <span class="tag-text">WHY CHOOSE US</span>
+                    </div>
+                    <h2 class="section-giant-title">Built Different, <span class="neon-gradient">Built Better</span></h2>
+                    <p class="section-sub-lead">We combine strategic thinking, premium craft, and reliable execution to
+                        deliver results that compound over time.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 align-items-center whychoose-grid-trigger">
+
+                <div class="col-lg-5 whychoose-stat-block">
+                    <div class="whychoose-stat-panel">
+                        <div class="stat-icon-ring">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h2 class="stat-big-number">5<span class="plus-sign">+</span></h2>
+                        <p class="stat-label">Years of Excellence</p>
+                        <div class="stat-divider"></div>
+                        <p class="stat-footnote">Trusted by 50+ global brands to deliver premium digital experiences.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 whychoose-list-block">
+                    <div class="whychoose-row-item">
+                        <div class="whychoose-icon-box sh-web">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="whychoose-row-meta">
+                            <h5>Strategic Thinking</h5>
+                            <p>Every decision backed by data and intent.</p>
+                        </div>
+                    </div>
+
+                    <div class="whychoose-row-item">
+                        <div class="whychoose-icon-box sh-marketing">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="whychoose-row-meta">
+                            <h5>Fast Delivery</h5>
+                            <p>Agile sprints that ship without compromise.</p>
+                        </div>
+                    </div>
+
+                    <div class="whychoose-row-item">
+                        <div class="whychoose-icon-box sh-seo">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="whychoose-row-meta">
+                            <h5>Reliable Support</h5>
+                            <p>24/7 partnership long after launch.</p>
+                        </div>
+                    </div>
+
+                    <div class="whychoose-row-item">
+                        <div class="whychoose-icon-box sh-social">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="whychoose-row-meta">
+                            <h5>Premium Craft</h5>
+                            <p>Pixel-level obsession on every screen.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
