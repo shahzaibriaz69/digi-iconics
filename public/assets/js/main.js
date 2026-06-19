@@ -318,6 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var labelEl  = document.getElementById("processStepLabel");
     var titleEl  = document.getElementById("processTitle");
     var descEl   = document.getElementById("processDesc");
+    var infoCard = document.querySelector(".process-active-info");
     var arrowGrp = document.getElementById("processArrowGroup");
     var layers   = document.querySelectorAll(".funnel-layer");
 
@@ -326,48 +327,94 @@ document.addEventListener("DOMContentLoaded", function () {
         title : "Discovery",
         desc  : "Understanding your goals, audience and market position before any work begins.",
         color : "#818cf8",
-        arrowY: "88"
+        y     : 88
     };
 
-    function setActive(label, title, desc, color, arrowY) {
-        labelEl.textContent  = label;
-        labelEl.style.color  = color;
-        titleEl.textContent  = title;
-        descEl.textContent   = desc;
-        // CSS transition on #processArrowGroup handles smooth move
-        arrowGrp.setAttribute("transform", "translate(0," + arrowY + ")");
+    function moveArrow(y) {
+        if (typeof gsap !== "undefined" && arrowGrp) {
+            gsap.to(arrowGrp, {
+                 y: y,
+    duration: 0.6,
+    ease: "power3.out"
+            });
+        }
     }
 
-    if (layers.length && labelEl && titleEl && descEl && arrowGrp) {
+    function setContent(label, title, desc, color) {
+        if (labelEl) { labelEl.textContent = label; labelEl.style.color = color; }
+        if (titleEl) titleEl.textContent = title;
+        if (descEl)  descEl.textContent  = desc;
+    }
+
+    if (layers.length && arrowGrp) {
         layers.forEach(function (layer) {
             layer.addEventListener("mouseenter", function () {
-                setActive(
+                setContent(
                     layer.getAttribute("data-label"),
                     layer.getAttribute("data-title"),
                     layer.getAttribute("data-desc"),
-                    layer.getAttribute("data-color"),
-                    layer.getAttribute("data-arrow-y")
+                    layer.getAttribute("data-color")
                 );
+                moveArrow(parseInt(layer.getAttribute("data-arrow-y"), 10));
+                var glowColor = layer.getAttribute("data-color");
+                if (infoCard) {
+    infoCard.style.borderColor = glowColor;
+    infoCard.style.boxShadow = "0 0 25px " + glowColor;
+}
+
+if (titleEl) {
+    titleEl.style.color = glowColor;
+}
+
+if (labelEl) {
+    labelEl.style.color = glowColor;
+}
                 layers.forEach(function (l) {
-                    l.style.opacity   = "0.5";
-                    l.style.transform = "scale(1)";
+                    gsap.to(l, {
+        opacity: 0.45,
+        duration: 0.35,
+        ease: "power2.out"
+    });
                 });
-                layer.style.opacity   = "1";
-                layer.style.transform = "scale(1.04)";
+                gsap.to(layer, {
+  scale: 1.06,
+    duration: 0.4,
+    ease: "back.out(1.7)"
+});
+gsap.to(layer, {
+    scale: 1,
+    duration: 0.3,
+    ease: "power2.out"
+});
+                layer.style.filter =
+      "drop-shadow(0 0 5px " + glowColor + ")" +
+    " drop-shadow(0 0 10px " + glowColor + ")";
             });
 
             layer.addEventListener("mouseleave", function () {
+                if (infoCard) {
+    infoCard.style.borderColor = "rgba(255,255,255,0.1)";
+    infoCard.style.boxShadow = "none";
+}
+
+if (titleEl) {
+    titleEl.style.color = "";
+}
+
+if (labelEl) {
+    labelEl.style.color = defaultState.color;
+}
                 layers.forEach(function (l) {
-                    l.style.opacity   = "1";
-                    l.style.transform = "scale(1)";
+                   gsap.to(l, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.35,
+        ease: "power2.out"
+    });
+    l.style.filter = "none";
                 });
-                setActive(
-                    defaultState.label,
-                    defaultState.title,
-                    defaultState.desc,
-                    defaultState.color,
-                    defaultState.arrowY
-                );
+                setContent(defaultState.label, defaultState.title, defaultState.desc, defaultState.color);
+                moveArrow(defaultState.y);
             });
         });
     }
@@ -408,10 +455,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 toggleActions: "play none none none"
             },
             opacity: 0,
-            scale: 0.8,
-            duration: 0.8,
-            stagger: 0.15,
-            delay: 0.4,
+            duration: 0.7,
+            stagger: 0.12,
+            delay: 0.3,
             ease: "power3.out"
         });
 

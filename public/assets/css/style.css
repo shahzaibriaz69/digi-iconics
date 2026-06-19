@@ -1530,12 +1530,19 @@ a {
 
 .process-active-info {
     background: rgba(10, 16, 32, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.35s ease;
     padding: 22px 24px;
     margin-bottom: 14px;
     min-height: 130px;
 }
+
+.process-info-card.active-color {
+    border-color: var(--card-color);
+    box-shadow: 0 0 20px var(--card-color);
+}
+
 
 .process-active-step {
     font-size: 0.75rem;
@@ -1543,7 +1550,7 @@ a {
     letter-spacing: 0.5px;
     color: #818cf8;
     margin-bottom: 8px;
-    transition: color 0.35s ease;
+    transition: color 0.2s ease;
 }
 
 .process-active-title {
@@ -1551,7 +1558,6 @@ a {
     font-size: 1.4rem;
     font-weight: 800;
     margin-bottom: 10px;
-    transition: opacity 0.3s ease;
 }
 
 .process-active-desc {
@@ -1559,7 +1565,6 @@ a {
     font-size: 0.92rem;
     line-height: 1.65;
     margin-bottom: 0;
-    transition: opacity 0.3s ease;
 }
 
 .process-hint-text {
@@ -1575,31 +1580,31 @@ a {
 
 .process-funnel-svg {
     width: 100%;
-    max-width: 340px;
+    max-width: 445px;
     height: auto;
     overflow: visible;
 }
 
-/* Smooth arrow transition via CSS */
-#processArrowGroup {
-    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .funnel-layer {
     cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
     transform-box: fill-box;
     transform-origin: center;
-}
 
-.funnel-layer {
-    opacity: 1 !important;
-    filter: none !important;
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease,
+        filter 0.45s ease;
 }
 
 .process-funnel-svg * {
     opacity: 1 !important;
 }
+
+/* Arrow smooth fast transition */
+#processArrowGroup {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 
 .funnel-label-text {
     font-family: 'Inter', sans-serif;
@@ -1608,12 +1613,11 @@ a {
     pointer-events: none;
 }
 
-/* Blink animation for the arrow */
 @keyframes processArrowBlink {
 
     0%,
     100% {
-        opacity: 0.3;
+        opacity: 0.25;
     }
 
     50% {
@@ -1621,8 +1625,26 @@ a {
     }
 }
 
+.funnel-layer:hover {
+    transform: scale(1.05);
+}
+
 .process-arrow-blink {
-    animation: processArrowBlink 1.4s ease-in-out infinite;
+    animation: arrowPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: translateY(4px);
+    }
 }
 
 @media (max-width: 991px) {
