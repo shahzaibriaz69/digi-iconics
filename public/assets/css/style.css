@@ -59,6 +59,18 @@ a {
     z-index: 1050;
 }
 
+.navbar-brand {
+    padding: 0 !important;
+    overflow: visible;
+}
+
+.logo-img {
+    height: 85px;
+    width: auto;
+    transform: scale(2);
+    transform-origin: left center;
+}
+
 
 .logo-text {
     font-weight: 800;

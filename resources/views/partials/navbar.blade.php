@@ -2,7 +2,7 @@
     <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="{{ url('/') }}">
-            <span class="logo-text">DIGI-<span>ICONICS</span></span>
+            <img src="{{ asset('assets/images/digi-iconics-logo.png') }}" alt="DIGI-ICONICS Logo" class="logo-img">
         </a>
 
 

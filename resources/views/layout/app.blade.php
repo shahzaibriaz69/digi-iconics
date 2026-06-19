@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 
+
+
     <style>
         :root {
             --primary: #2563eb;
