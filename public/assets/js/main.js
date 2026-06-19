@@ -231,3 +231,190 @@ document.addEventListener("DOMContentLoaded", function () {
         ScrollTrigger.refresh();
     }
 });
+
+// ==========================================================================
+// 8. CASE STUDIES - 3D SCROLLTRIGGER CINEMATIC EFFECT
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".casestudies-header-trigger > *", {
+            scrollTrigger: {
+                trigger: ".casestudies-header-trigger",
+                start: "top 85%",
+                toggleActions: "play none none none"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
+
+        gsap.from(".casestudies-grid-trigger .casestudy-pillar-block:nth-child(1)", {
+            scrollTrigger: {
+                trigger: ".casestudies-grid-trigger",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            x: -150,
+            rotationY: 25,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power4.out"
+        });
+
+        gsap.from(".casestudies-grid-trigger .casestudy-pillar-block:nth-child(2)", {
+            scrollTrigger: {
+                trigger: ".casestudies-grid-trigger",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            y: 150,
+            rotationX: -20,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power4.out"
+        });
+
+        gsap.from(".casestudies-grid-trigger .casestudy-pillar-block:nth-child(3)", {
+            scrollTrigger: {
+                trigger: ".casestudies-grid-trigger",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            x: 150,
+            rotationY: -25,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power4.out"
+        });
+
+        gsap.from(".premium-casestudies-section .btn-outline-info", {
+            scrollTrigger: {
+                trigger: ".premium-casestudies-section .btn-outline-info",
+                start: "top 90%",
+                toggleActions: "play none none none"
+            },
+            y: 40,
+            scale: 0.9,
+            opacity: 0,
+            duration: 1,
+            delay: 0.3,
+            ease: "back.out(1.7)"
+        });
+
+        ScrollTrigger.refresh();
+    }
+});
+
+// ==========================================================================
+// 9. PROCESS SECTION - INTERACTIVE FUNNEL + SCROLLTRIGGER
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ---- Interactive Funnel ----
+    var labelEl  = document.getElementById("processStepLabel");
+    var titleEl  = document.getElementById("processTitle");
+    var descEl   = document.getElementById("processDesc");
+    var arrowGrp = document.getElementById("processArrowGroup");
+    var layers   = document.querySelectorAll(".funnel-layer");
+
+    var defaultState = {
+        label : "STEP 01",
+        title : "Discovery",
+        desc  : "Understanding your goals, audience and market position before any work begins.",
+        color : "#818cf8",
+        arrowY: "88"
+    };
+
+    function setActive(label, title, desc, color, arrowY) {
+        labelEl.textContent  = label;
+        labelEl.style.color  = color;
+        titleEl.textContent  = title;
+        descEl.textContent   = desc;
+        // CSS transition on #processArrowGroup handles smooth move
+        arrowGrp.setAttribute("transform", "translate(0," + arrowY + ")");
+    }
+
+    if (layers.length && labelEl && titleEl && descEl && arrowGrp) {
+        layers.forEach(function (layer) {
+            layer.addEventListener("mouseenter", function () {
+                setActive(
+                    layer.getAttribute("data-label"),
+                    layer.getAttribute("data-title"),
+                    layer.getAttribute("data-desc"),
+                    layer.getAttribute("data-color"),
+                    layer.getAttribute("data-arrow-y")
+                );
+                layers.forEach(function (l) {
+                    l.style.opacity   = "0.5";
+                    l.style.transform = "scale(1)";
+                });
+                layer.style.opacity   = "1";
+                layer.style.transform = "scale(1.04)";
+            });
+
+            layer.addEventListener("mouseleave", function () {
+                layers.forEach(function (l) {
+                    l.style.opacity   = "1";
+                    l.style.transform = "scale(1)";
+                });
+                setActive(
+                    defaultState.label,
+                    defaultState.title,
+                    defaultState.desc,
+                    defaultState.color,
+                    defaultState.arrowY
+                );
+            });
+        });
+    }
+
+    // ---- ScrollTrigger Entrance Animation ----
+    if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".process-content-block", {
+            scrollTrigger: {
+                trigger: ".process-grid-trigger",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            x: -100,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power4.out"
+        });
+
+        gsap.from(".process-funnel-block", {
+            scrollTrigger: {
+                trigger: ".process-grid-trigger",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            x: 100,
+            scale: 0.9,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power4.out"
+        });
+
+        gsap.from(".funnel-layer", {
+            scrollTrigger: {
+                trigger: ".process-funnel-block",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            scale: 0.8,
+            duration: 0.8,
+            stagger: 0.15,
+            delay: 0.4,
+            ease: "power3.out"
+        });
+
+        ScrollTrigger.refresh();
+    }
+});

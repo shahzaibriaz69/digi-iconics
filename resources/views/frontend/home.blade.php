@@ -277,4 +277,190 @@
         </div>
     </section>
 
+    <section class="premium-casestudies-section py-5">
+        <div class="ambient-flare flare-casestudies"></div>
+
+        <div class="container py-5">
+            <div class="row mb-5 text-center justify-content-center casestudies-header-trigger">
+                <div class="col-lg-7">
+                    <div class="agency-tag mx-auto mb-3">
+                        <span class="tag-pulse"></span>
+                        <span class="tag-text">CASE STUDIES</span>
+                    </div>
+                    <h2 class="section-giant-title">Proven Results, <span class="neon-gradient">Measurable Growth</span>
+                    </h2>
+                    <p class="section-sub-lead">Real campaigns, real numbers — see how our strategies translated into
+                        measurable revenue for global brands.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 casestudies-grid-trigger">
+
+                <div class="col-lg-4 col-md-6 casestudy-pillar-block">
+                    <div class="casestudy-master-card cs-indigo">
+                        <div class="casestudy-icon-box cs-icon-indigo">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h2 class="casestudy-stat-number">150<span class="stat-percent-sign">%</span></h2>
+                        <p class="casestudy-stat-label">Traffic Growth</p>
+                        <div class="casestudy-divider"></div>
+                        <h5 class="casestudy-project-title">Luxury Retail Platform</h5>
+                        <p class="casestudy-project-category">E-commerce</p>
+                        <a href="#" class="casestudy-link-arrow">View Case Study <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 casestudy-pillar-block">
+                    <div class="casestudy-master-card cs-warning">
+                        <div class="casestudy-icon-box cs-icon-warning">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h2 class="casestudy-stat-number">80<span class="stat-percent-sign">%</span></h2>
+                        <p class="casestudy-stat-label">User Retention</p>
+                        <div class="casestudy-divider"></div>
+                        <h5 class="casestudy-project-title">Fintech Dashboard</h5>
+                        <p class="casestudy-project-category">SaaS Platform</p>
+                        <a href="#" class="casestudy-link-arrow">View Case Study <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 casestudy-pillar-block">
+                    <div class="casestudy-master-card cs-cyan">
+                        <div class="casestudy-icon-box cs-icon-cyan">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h2 class="casestudy-stat-number">260<span class="stat-percent-sign">%</span></h2>
+                        <p class="casestudy-stat-label">Organic Revenue</p>
+                        <div class="casestudy-divider"></div>
+                        <h5 class="casestudy-project-title">Hospitality Brand</h5>
+                        <p class="casestudy-project-category">SEO Campaign</p>
+                        <a href="#" class="casestudy-link-arrow">View Case Study <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-5 text-center">
+                <div class="col-12">
+                    <a href="/portfolio" class="btn btn-outline-info px-5 py-3"
+                        style="border-radius: 30px; font-weight: 600; letter-spacing: 1px;">
+                        VIEW ALL CASE STUDIES <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="premium-process-section py-5">
+        <div class="ambient-flare flare-process"></div>
+
+        <div class="container py-5">
+            <div class="row align-items-center process-grid-trigger">
+
+                <div class="col-lg-6 process-content-block">
+                    <div class="agency-tag mb-3">
+                        <span class="tag-pulse"></span>
+                        <span class="tag-text">OUR PROCESS</span>
+                    </div>
+                    <h2 class="section-giant-title">See How Every Step <span class="neon-gradient">Drives Your
+                            Growth</span></h2>
+                    <p class="section-sub-lead mb-4">A connected process that takes your idea from concept to a fully
+                        launched, scalable digital product, with full visibility at every stage.</p>
+
+                    <div class="process-active-info">
+                        <div class="process-active-step" id="processStepLabel">STEP 01</div>
+                        <h3 class="process-active-title" id="processTitle">Discovery</h3>
+                        <p class="process-active-desc" id="processDesc">Understanding your goals, audience and market
+                            position before any work begins.</p>
+                    </div>
+
+                    <p class="process-hint-text">Hover any layer — the arrow follows you</p>
+
+                    <a href="#" class="prime-btn mt-3">
+                        <span>Start Your Project</span>
+                        <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+
+                <div class="col-lg-6 process-funnel-block">
+                    <svg viewBox="0 0 380 380" class="process-funnel-svg" role="img"
+                        aria-label="Interactive 3D funnel with 4 process layers">
+                        <defs>
+                            <linearGradient id="fl1" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#1d4ed8" />
+                                <stop offset="50%" stop-color="#3b82f6" />
+                                <stop offset="100%" stop-color="#1e3a8a" />
+                            </linearGradient>
+                            <linearGradient id="fl2" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#5b21b6" />
+                                <stop offset="50%" stop-color="#7c3aed" />
+                                <stop offset="100%" stop-color="#4c1d95" />
+                            </linearGradient>
+                            <linearGradient id="fl3" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#0e7490" />
+                                <stop offset="50%" stop-color="#06b6d4" />
+                                <stop offset="100%" stop-color="#155e75" />
+                            </linearGradient>
+                            <linearGradient id="fl4" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#9d174d" />
+                                <stop offset="50%" stop-color="#ec4899" />
+                                <stop offset="100%" stop-color="#831843" />
+                            </linearGradient>
+                            <radialGradient id="topRim" cx="50%" cy="30%" r="70%">
+                                <stop offset="0%" stop-color="#0a1628" />
+                                <stop offset="100%" stop-color="#020617" />
+                            </radialGradient>
+                        </defs>
+
+                        <ellipse cx="190" cy="50" rx="120" ry="26" fill="url(#topRim)">
+                        </ellipse>
+
+                        <path class="funnel-layer" data-step="0" data-arrow-y="88" data-label="STEP 01"
+                            data-title="Discovery"
+                            data-desc="Understanding your goals, audience and market position before any work begins."
+                            data-color="#818cf8" d="M 70 50 L 100 130 Q 190 145 280 130 L 310 50 Q 190 76 70 50 Z"
+                            fill="url(#fl1)"></path>
+                        <ellipse cx="190" cy="50" rx="120" ry="26" fill="none"
+                            stroke="rgba(255,255,255,0.15)" stroke-width="1.5"></ellipse>
+
+                        <path class="funnel-layer" data-step="1" data-arrow-y="160" data-label="STEP 02"
+                            data-title="Strategy"
+                            data-desc="Mapping the roadmap and defining key milestones for the project."
+                            data-color="#d8b4fe" d="M 100 130 L 122 195 Q 190 207 258 195 L 280 130 Q 190 145 100 130 Z"
+                            fill="url(#fl2)"></path>
+
+                        <path class="funnel-layer" data-step="2" data-arrow-y="222" data-label="STEP 03"
+                            data-title="Design &amp; Build"
+                            data-desc="Crafting and engineering the complete digital solution." data-color="#a5f3fc"
+                            d="M 122 195 L 140 255 Q 190 264 240 255 L 258 195 Q 190 207 122 195 Z" fill="url(#fl3)">
+                        </path>
+
+                        <path class="funnel-layer" data-step="3" data-arrow-y="278" data-label="STEP 04"
+                            data-title="Launch &amp; Grow"
+                            data-desc="Deploying the product and scaling it for continued ROI." data-color="#fbcfe8"
+                            d="M 140 255 L 158 310 Q 190 316 222 310 L 240 255 Q 190 264 140 255 Z" fill="url(#fl4)">
+                        </path>
+                        <ellipse cx="190" cy="312" rx="32" ry="9" fill="#4a0d28"></ellipse>
+
+                        <!-- Small arrow — default at top (blue layer) -->
+                        <g id="processArrowGroup" transform="translate(0,88)">
+                            <path class="process-arrow-blink"
+                                d="M 184 -8 L 196 -8 L 196 1 L 202 1 L 190 13 L 178 1 L 184 1 Z"
+                                fill="rgba(255,255,255,0.95)"></path>
+                        </g>
+
+                        <text x="340" y="90" class="funnel-label-text" fill="#a5b4fc">01 Discovery</text>
+                        <text x="340" y="165" class="funnel-label-text" fill="#d8b4fe">02 Strategy</text>
+                        <text x="340" y="225" class="funnel-label-text" fill="#a5f3fc">03 Build</text>
+                        <text x="340" y="285" class="funnel-label-text" fill="#fbcfe8">04 Launch</text>
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 @endsection

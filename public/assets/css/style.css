@@ -1304,3 +1304,339 @@ a {
         padding: 38px 28px;
     }
 }
+
+/* ==========================================================================
+   05 CASE STUDIES SECTION STYLING
+   ========================================================================== */
+.premium-casestudies-section {
+    position: relative;
+    background-color: #030712 !important;
+    padding-top: 60px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.flare-casestudies {
+    width: 580px;
+    height: 580px;
+    background: radial-gradient(rgba(168, 85, 247, 0.13), transparent);
+    top: 5%;
+    right: -12%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(150px);
+}
+
+.casestudies-header-trigger {
+    margin-bottom: 70px;
+}
+
+/* ---- Base Card ---- */
+.casestudy-master-card {
+    position: relative;
+    background: rgba(10, 16, 32, 0.65) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    border-radius: 20px !important;
+    padding: 32px 28px !important;
+    height: 100%;
+    overflow: hidden;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+/* ---- Top colored bar ---- */
+.casestudy-master-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 20px 20px 0 0;
+}
+
+.casestudy-master-card.cs-indigo::before {
+    background: linear-gradient(90deg, #4f46e5, #818cf8);
+}
+
+.casestudy-master-card.cs-warning::before {
+    background: linear-gradient(90deg, #d97706, #fbbf24);
+}
+
+.casestudy-master-card.cs-cyan::before {
+    background: linear-gradient(90deg, #0891b2, #22d3ee);
+}
+
+/* ---- Icon box ---- */
+.casestudy-icon-box {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.casestudy-icon-box.cs-icon-indigo {
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    color: #818cf8;
+}
+
+.casestudy-icon-box.cs-icon-warning {
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    color: #fbbf24;
+}
+
+.casestudy-icon-box.cs-icon-cyan {
+    background: rgba(34, 211, 238, 0.15);
+    border: 1px solid rgba(34, 211, 238, 0.25);
+    color: #22d3ee;
+}
+
+/* ---- Stat number ---- */
+.casestudy-stat-number {
+    color: #ffffff;
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+    line-height: 1;
+}
+
+.stat-percent-sign {
+    font-weight: 700;
+}
+
+.cs-indigo .stat-percent-sign {
+    color: #818cf8;
+}
+
+.cs-warning .stat-percent-sign {
+    color: #fbbf24;
+}
+
+.cs-cyan .stat-percent-sign {
+    color: #22d3ee;
+}
+
+.casestudy-stat-label {
+    color: #64748b;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+}
+
+.casestudy-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.06);
+    margin: 18px 0 14px;
+}
+
+.casestudy-project-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.casestudy-project-category {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+/* ---- Arrow link ---- */
+.casestudy-link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: gap 0.3s ease;
+    text-decoration: none;
+}
+
+.cs-indigo .casestudy-link-arrow {
+    color: #818cf8;
+}
+
+.cs-warning .casestudy-link-arrow {
+    color: #fbbf24;
+}
+
+.cs-cyan .casestudy-link-arrow {
+    color: #22d3ee;
+}
+
+.casestudy-link-arrow:hover {
+    gap: 12px;
+}
+
+/* ---- Hover lifts ---- */
+.casestudy-master-card.cs-indigo:hover {
+    border-color: rgba(99, 102, 241, 0.45) !important;
+    transform: translateY(-8px);
+}
+
+.casestudy-master-card.cs-warning:hover {
+    border-color: rgba(245, 158, 11, 0.45) !important;
+    transform: translateY(-8px);
+}
+
+.casestudy-master-card.cs-cyan:hover {
+    border-color: rgba(34, 211, 238, 0.45) !important;
+    transform: translateY(-8px);
+}
+
+/* ==========================================================================
+   06 PROCESS SECTION STYLING
+   ========================================================================== */
+.premium-process-section {
+    position: relative;
+    background-color: #030712 !important;
+    padding-top: 60px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.flare-process {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(rgba(124, 58, 237, 0.13), transparent);
+    top: 10%;
+    left: -15%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(150px);
+}
+
+.process-content-block {
+    padding-right: 30px;
+}
+
+.process-active-info {
+    background: rgba(10, 16, 32, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+    min-height: 130px;
+}
+
+.process-active-step {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #818cf8;
+    margin-bottom: 8px;
+    transition: color 0.35s ease;
+}
+
+.process-active-title {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.process-active-desc {
+    color: #94a3b8;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+    transition: opacity 0.3s ease;
+}
+
+.process-hint-text {
+    color: #475569;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+.process-funnel-block {
+    display: flex;
+    justify-content: center;
+}
+
+.process-funnel-svg {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    overflow: visible;
+}
+
+/* Smooth arrow transition via CSS */
+#processArrowGroup {
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.funnel-layer {
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.funnel-layer {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+.process-funnel-svg * {
+    opacity: 1 !important;
+}
+
+.funnel-label-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+/* Blink animation for the arrow */
+@keyframes processArrowBlink {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.process-arrow-blink {
+    animation: processArrowBlink 1.4s ease-in-out infinite;
+}
+
+@media (max-width: 991px) {
+    .process-content-block {
+        padding-right: 0;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .process-active-info {
+        text-align: left;
+    }
+
+    .process-funnel-svg {
+        max-width: 260px;
+    }
+}
