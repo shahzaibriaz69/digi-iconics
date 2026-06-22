@@ -590,3 +590,54 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// ==========================================================================
+// 11. TESTIMONIALS - SCROLLTRIGGER ENTRANCE ANIMATION
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Heading pop-up
+        gsap.from(".testimonials-header-trigger > *", {
+            scrollTrigger: {
+                trigger: ".testimonials-header-trigger",
+                start: "top 85%",
+                toggleActions: "play none none none"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
+
+        // Row 1: slide in from left
+        gsap.from(".marquee-row-trigger", {
+            scrollTrigger: {
+                trigger: ".marquee-row-trigger",
+                start: "top 85%",
+                toggleActions: "play none none none"
+            },
+            x: -80,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+
+        // Row 2: slide in from right
+        gsap.from(".testimonial-marquee-row:nth-of-type(2)", {
+            scrollTrigger: {
+                trigger: ".testimonial-marquee-row:nth-of-type(2)",
+                start: "top 90%",
+                toggleActions: "play none none none"
+            },
+            x: 80,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+
+        ScrollTrigger.refresh();
+    }
+});

@@ -1929,3 +1929,164 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================================
+   08 TESTIMONIALS SECTION - DUAL MARQUEE
+   ========================================================================== */
+.premium-testimonials-section {
+    position: relative;
+    background-color: #030712 !important;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.flare-testimonials {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(rgba(99, 102, 241, 0.12), transparent);
+    top: 10%;
+    right: -12%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(150px);
+}
+
+.testimonials-header-trigger {
+    margin-bottom: 60px;
+}
+
+/* ---- Marquee Row ---- */
+.testimonial-marquee-row {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Edge fade */
+.testimonial-marquee-row::before,
+.testimonial-marquee-row::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.testimonial-marquee-row::before {
+    left: 0;
+    background: linear-gradient(to right, #030712, transparent);
+}
+
+.testimonial-marquee-row::after {
+    right: 0;
+    background: linear-gradient(to left, #030712, transparent);
+}
+
+/* ---- Track ---- */
+.testimonial-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+}
+
+@keyframes scrollLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRight {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.track-scroll-left {
+    animation: scrollLeft 30s linear infinite;
+}
+
+.track-scroll-right {
+    animation: scrollRight 30s linear infinite;
+}
+
+.testimonial-marquee-row:hover .track-scroll-left,
+.testimonial-marquee-row:hover .track-scroll-right {
+    animation-play-state: paused;
+}
+
+/* ---- Card ---- */
+.t-card {
+    width: 280px;
+    flex-shrink: 0;
+    background: rgba(10, 16, 32, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 22px 20px;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.t-card:hover {
+    border-color: rgba(99, 102, 241, 0.35);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.t-stars {
+    color: #fbbf24;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.t-quote {
+    color: #94a3b8;
+    font-size: 12.5px;
+    line-height: 1.65;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.t-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.t-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.t-name {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.t-role {
+    color: #64748b;
+    font-size: 11px;
+}

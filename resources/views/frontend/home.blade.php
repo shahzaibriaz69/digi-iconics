@@ -609,5 +609,277 @@
         </div>
     </section>
 
+    <section class="premium-testimonials-section py-5">
+        <div class="ambient-flare flare-testimonials"></div>
+
+        <div class="container py-5">
+            <div class="row mb-5 text-center justify-content-center testimonials-header-trigger">
+                <div class="col-lg-7">
+                    <div class="agency-tag mx-auto mb-3">
+                        <span class="tag-pulse"></span>
+                        <span class="tag-text">TESTIMONIALS</span>
+                    </div>
+                    <h2 class="section-giant-title">What Our <span class="neon-gradient">Clients Say</span></h2>
+                    <p class="section-sub-lead">Trusted by 50+ global brands across web, marketing and design.</p>
+                </div>
+            </div>
+        </div>
+
+        {{-- Row 1: scroll left --}}
+        <div class="testimonial-marquee-row marquee-row-trigger">
+            <div class="testimonial-track track-scroll-left">
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"DIGI-ICONICS transformed our online presence completely. Revenue up 150% in just 3
+                        months."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(99,102,241,0.3);">AK</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Ahmad Khan</div>
+                            <div class="t-role">CEO, LuxeRetail</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"The SEO campaign delivered results we hadn't seen in 5 years of trying other
+                        agencies."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(245,158,11,0.3);">SR</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Sarah Rahman</div>
+                            <div class="t-role">Marketing Head, StayElite</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Our fintech dashboard redesign improved user retention by 80%. Exceptional work."
+                    </p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(34,211,238,0.3);">MU</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Mike Usman</div>
+                            <div class="t-role">CTO, PayFast</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"From branding to web dev — they handled everything flawlessly. True professionals."
+                    </p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(236,72,153,0.3);">NJ</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Nadia Javed</div>
+                            <div class="t-role">Founder, NovaBrand</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Social media ROI doubled within 60 days. I recommend them to every business owner."
+                    </p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(168,85,247,0.3);">ZA</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Zain Ali</div>
+                            <div class="t-role">Director, GrowthCo</div>
+                        </div>
+                    </div>
+                </div>
+                {{-- Duplicates for seamless loop --}}
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"DIGI-ICONICS transformed our online presence completely. Revenue up 150% in just 3
+                        months."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(99,102,241,0.3);">AK</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Ahmad Khan</div>
+                            <div class="t-role">CEO, LuxeRetail</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"The SEO campaign delivered results we hadn't seen in 5 years of trying other
+                        agencies."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(245,158,11,0.3);">SR</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Sarah Rahman</div>
+                            <div class="t-role">Marketing Head, StayElite</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Our fintech dashboard redesign improved user retention by 80%. Exceptional work."
+                    </p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(34,211,238,0.3);">MU</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Mike Usman</div>
+                            <div class="t-role">CTO, PayFast</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"From branding to web dev — they handled everything flawlessly. True professionals."
+                    </p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(236,72,153,0.3);">NJ</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Nadia Javed</div>
+                            <div class="t-role">Founder, NovaBrand</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Social media ROI doubled within 60 days. I recommend them to every business owner."
+                    </p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(168,85,247,0.3);">ZA</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Zain Ali</div>
+                            <div class="t-role">Director, GrowthCo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- Row 2: scroll right --}}
+        <div class="testimonial-marquee-row mt-4">
+            <div class="testimonial-track track-scroll-right">
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Best digital agency we've worked with. Delivered 3x our expected results on time."
+                    </p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(34,211,238,0.3);">FA</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Farhan Aziz</div>
+                            <div class="t-role">CMO, TechVault</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"The UI/UX redesign reduced our bounce rate by 45%. Stunning work every single
+                        time."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(99,102,241,0.3);">LP</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Layla Park</div>
+                            <div class="t-role">Product Lead, DesignHub</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"They built our entire e-commerce system from scratch. Absolutely flawless
+                        execution."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(245,158,11,0.3);">HM</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Hassan Malik</div>
+                            <div class="t-role">Owner, ShopElite</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Google ranking went from page 5 to top 3 in just 4 months. Truly remarkable team."
+                    </p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(236,72,153,0.3);">RK</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Rania Khan</div>
+                            <div class="t-role">CEO, BloomDigital</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"App downloads tripled after their ASO and social media strategy. Absolutely
+                        incredible."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(168,85,247,0.3);">TS</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Tariq Shah</div>
+                            <div class="t-role">Founder, AppNova</div>
+                        </div>
+                    </div>
+                </div>
+                {{-- Duplicates for seamless loop --}}
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Best digital agency we've worked with. Delivered 3x our expected results on time."
+                    </p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(34,211,238,0.3);">FA</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Farhan Aziz</div>
+                            <div class="t-role">CMO, TechVault</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"The UI/UX redesign reduced our bounce rate by 45%. Stunning work every single
+                        time."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(99,102,241,0.3);">LP</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Layla Park</div>
+                            <div class="t-role">Product Lead, DesignHub</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"They built our entire e-commerce system from scratch. Absolutely flawless
+                        execution."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(245,158,11,0.3);">HM</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Hassan Malik</div>
+                            <div class="t-role">Owner, ShopElite</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Google ranking went from page 5 to top 3 in just 4 months. Truly remarkable team."
+                    </p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(236,72,153,0.3);">RK</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Rania Khan</div>
+                            <div class="t-role">CEO, BloomDigital</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"App downloads tripled after their ASO and social media strategy. Absolutely
+                        incredible."</p>
+                    <div class="t-author">
+                        <div class="t-avatar" style="background:rgba(168,85,247,0.3);">TS</div>
+                        <div class="t-author-info">
+                            <div class="t-name">Tariq Shah</div>
+                            <div class="t-role">Founder, AppNova</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
 
 @endsection
