@@ -1674,3 +1674,258 @@ a {
         max-width: 260px;
     }
 }
+
+/* ==========================================================================
+   07 PORTFOLIO SECTION STYLING
+   ========================================================================== */
+.premium-portfolio-section {
+    position: relative;
+    background-color: #030712 !important;
+    padding-top: 60px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.flare-portfolio {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(rgba(99, 102, 241, 0.12), transparent);
+    top: 10%;
+    left: -12%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(150px);
+}
+
+.portfolio-header-trigger {
+    margin-bottom: 60px;
+}
+
+/* ---- Row 1: featured + right stack ---- */
+.portfolio-row-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.port-right-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ---- Row 2: 3 equal ---- */
+.portfolio-row-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* ---- Base Card ---- */
+.port-card {
+    background: rgba(10, 16, 32, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.12s ease;
+    transform-style: preserve-3d;
+}
+
+/* ---- Thumbnail area ---- */
+.port-thumb {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.port-thumb-sm {
+    height: 105px;
+}
+
+.port-thumb-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.08);
+    transition: transform 0.5s ease;
+}
+
+.port-thumb-sm .port-thumb-placeholder {
+    font-size: 2.2rem;
+}
+
+.port-card:hover .port-thumb-placeholder {
+    transform: scale(1.07);
+}
+
+/* Real image support */
+.port-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.port-card:hover .port-thumb img {
+    transform: scale(1.07);
+}
+
+.port-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 16, 32, 0.85) 0%, transparent 55%);
+    z-index: 1;
+}
+
+.port-thumb-glow {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    top: -40px;
+    right: -40px;
+    filter: blur(50px);
+    z-index: 0;
+}
+
+.port-thumb-content {
+    position: absolute;
+    bottom: 16px;
+    left: 18px;
+    right: 18px;
+    z-index: 2;
+}
+
+.port-cat-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 2px 10px;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.tag-indigo {
+    color: #818cf8;
+    background: rgba(99, 102, 241, 0.18);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.port-thumb-title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 0;
+}
+
+.port-thumb-title-sm {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.port-arrow-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 0.85rem;
+    transition: background 0.3s ease;
+}
+
+.port-card:hover .port-arrow-btn {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ---- Card footer ---- */
+.port-card-footer {
+    padding: 12px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.port-stack {
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.port-metric-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 100px;
+}
+
+.badge-indigo {
+    color: #818cf8;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.badge-warning {
+    color: #fbbf24;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.badge-cyan {
+    color: #22d3ee;
+    background: rgba(34, 211, 238, 0.1);
+    border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.badge-pink {
+    color: #f472b6;
+    background: rgba(236, 72, 153, 0.1);
+    border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+@media (max-width: 991px) {
+    .portfolio-row-top {
+        grid-template-columns: 1fr;
+    }
+
+    .port-right-stack {
+        flex-direction: row;
+    }
+
+    .port-right-stack .port-card {
+        flex: 1;
+    }
+
+    .portfolio-row-bottom {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .port-right-stack {
+        flex-direction: column;
+    }
+
+    .portfolio-row-bottom {
+        grid-template-columns: 1fr;
+    }
+}

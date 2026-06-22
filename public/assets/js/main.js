@@ -466,3 +466,127 @@ if (labelEl) {
 });
 
 
+// ==========================================================================
+// 10. PORTFOLIO SECTION - FIXED 3D ENTRANCE + TILT HOVER
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ---- Ensure cards start visible (prevent stuck-invisible bug) ----
+    gsap.set([
+        ".port-featured",
+        ".port-right-stack .port-card",
+        ".portfolio-bottom-trigger .port-card"
+    ], { clearProps: "all" });
+
+    // ---- 3D Tilt + Glow on hover ----
+    var portConfigs = [
+        { id: "portCard1", color: "#818cf8", glow: "rgba(99,102,241,0.25)"  },
+        { id: "portCard2", color: "#fbbf24", glow: "rgba(245,158,11,0.25)"  },
+        { id: "portCard3", color: "#22d3ee", glow: "rgba(34,211,238,0.25)"  },
+        { id: "portCard4", color: "#f472b6", glow: "rgba(236,72,153,0.25)"  },
+        { id: "portCard5", color: "#818cf8", glow: "rgba(99,102,241,0.25)"  },
+        { id: "portCard6", color: "#fbbf24", glow: "rgba(245,158,11,0.25)"  }
+    ];
+
+    portConfigs.forEach(function (cfg) {
+        var card = document.getElementById(cfg.id);
+        if (!card) return;
+
+        card.addEventListener("mousemove", function (e) {
+            var rect = card.getBoundingClientRect();
+            var x    = ((e.clientX - rect.left)  / rect.width  - 0.5) * 12;
+            var y    = ((e.clientY - rect.top)    / rect.height - 0.5) * -12;
+            card.style.transform    = "perspective(700px) rotateX(" + y + "deg) rotateY(" + x + "deg) translateY(-5px)";
+            card.style.borderColor  = cfg.color + "80";
+            card.style.boxShadow    = "0 16px 36px rgba(0,0,0,0.4), 0 0 28px " + cfg.glow;
+        });
+
+        card.addEventListener("mouseleave", function () {
+            card.style.transform    = "perspective(700px) rotateX(0) rotateY(0) translateY(0)";
+            card.style.borderColor  = "rgba(255,255,255,0.09)";
+            card.style.boxShadow    = "none";
+        });
+    });
+
+    // ---- ScrollTrigger Animations ----
+    if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Heading
+        gsap.from(".portfolio-header-trigger > *", {
+            scrollTrigger: {
+                trigger: ".portfolio-header-trigger",
+                start: "top 85%",
+                toggleActions: "play none none none"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
+
+        // Featured card — from left
+        gsap.from(".port-featured", {
+            scrollTrigger: {
+                trigger: ".portfolio-top-trigger",
+                start: "top 82%",
+                toggleActions: "play none none none"
+            },
+            x: -130,
+            rotationY: 20,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power4.out"
+        });
+
+        // Right stacked cards — from right, staggered
+        gsap.from(".port-right-stack .port-card", {
+            scrollTrigger: {
+                trigger: ".portfolio-top-trigger",
+                start: "top 82%",
+                toggleActions: "play none none none"
+            },
+            x: 130,
+            opacity: 0,
+            duration: 1.4,
+            stagger: 0.18,
+            ease: "power4.out"
+        });
+
+        // Bottom 3 cards — from bottom, staggered 3D
+        gsap.from(".portfolio-bottom-trigger .port-card", {
+            scrollTrigger: {
+                trigger: ".portfolio-bottom-trigger",
+                start: "top 85%",
+                toggleActions: "play none none none"
+            },
+            y: 90,
+            rotationX: 15,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.18,
+            ease: "power4.out"
+        });
+
+        // Button
+        gsap.from(".portfolio-btn-trigger", {
+            scrollTrigger: {
+                trigger: ".portfolio-btn-trigger",
+                start: "top 92%",
+                toggleActions: "play none none none"
+            },
+            y: 40,
+            scale: 0.9,
+            opacity: 0,
+            duration: 1,
+            delay: 0.2,
+            ease: "back.out(1.7)"
+        });
+
+        // Refresh AFTER full page load (fonts + images settled)
+        window.addEventListener("load", function () {
+            ScrollTrigger.refresh();
+        });
+    }
+});

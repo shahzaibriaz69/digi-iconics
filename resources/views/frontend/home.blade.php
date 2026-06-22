@@ -463,5 +463,151 @@
         </div>
     </section>
 
+    <section class="premium-portfolio-section py-5">
+        <div class="ambient-flare flare-portfolio"></div>
+
+        <div class="container py-5">
+            <div class="row mb-5 text-center justify-content-center portfolio-header-trigger">
+                <div class="col-lg-7">
+                    <div class="agency-tag mx-auto mb-3">
+                        <span class="tag-pulse"></span>
+                        <span class="tag-text">OUR WORK</span>
+                    </div>
+                    <h2 class="section-giant-title">Projects That <span class="neon-gradient">Speak for Themselves</span>
+                    </h2>
+                    <p class="section-sub-lead">Hand-picked projects across web, marketing, and design — built for scale.
+                    </p>
+                </div>
+            </div>
+
+            {{-- Row 1: 1 big featured + 2 small stacked --}}
+            <div class="portfolio-row-top portfolio-top-trigger">
+
+                <div class="port-card port-featured port-indigo" id="portCard1">
+                    <div class="port-thumb">
+                        {{-- Replace with: <img src="{{ asset('assets/images/portfolio/project-1.jpg') }}" alt="Luxury E-Commerce Platform"> --}}
+                        <div class="port-thumb-placeholder"
+                            style="background:linear-gradient(135deg,#1e3a8a,#312e81,#4c1d95);">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="port-thumb-overlay"></div>
+                        <div class="port-thumb-glow" style="background:rgba(99,102,241,0.15);"></div>
+                        <div class="port-thumb-content">
+                            <span class="port-cat-tag tag-indigo">WEB DEV · FEATURED</span>
+                            <h4 class="port-thumb-title">Luxury E-Commerce Platform</h4>
+                        </div>
+                        <div class="port-arrow-btn">
+                            <i class="fas fa-arrow-up-right"></i>
+                        </div>
+                    </div>
+                    <div class="port-card-footer">
+                        <span class="port-stack">Laravel + React · 2024</span>
+                        <span class="port-metric-badge badge-indigo">+150% Traffic</span>
+                    </div>
+                </div>
+
+                <div class="port-right-stack">
+
+                    <div class="port-card port-small port-warning" id="portCard2">
+                        <div class="port-thumb port-thumb-sm">
+                            <div class="port-thumb-placeholder"
+                                style="background:linear-gradient(135deg,#78350f,#92400e);">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="port-thumb-overlay"></div>
+                            <div class="port-thumb-content">
+                                <h5 class="port-thumb-title-sm">SEO Growth Campaign</h5>
+                            </div>
+                        </div>
+                        <div class="port-card-footer">
+                            <span class="port-stack">Hospitality · 2024</span>
+                            <span class="port-metric-badge badge-warning">+260% Revenue</span>
+                        </div>
+                    </div>
+
+                    <div class="port-card port-small port-cyan" id="portCard3">
+                        <div class="port-thumb port-thumb-sm">
+                            <div class="port-thumb-placeholder"
+                                style="background:linear-gradient(135deg,#0e7490,#155e75);">
+                                <i class="fas fa-bezier-curve"></i>
+                            </div>
+                            <div class="port-thumb-overlay"></div>
+                            <div class="port-thumb-content">
+                                <h5 class="port-thumb-title-sm">Brand Identity System</h5>
+                            </div>
+                        </div>
+                        <div class="port-card-footer">
+                            <span class="port-stack">SaaS Startup · 2024</span>
+                            <span class="port-metric-badge badge-cyan">UI/UX</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {{-- Row 2: 3 equal cards --}}
+            <div class="portfolio-row-bottom portfolio-bottom-trigger">
+
+                <div class="port-card port-small port-pink" id="portCard4">
+                    <div class="port-thumb port-thumb-sm">
+                        <div class="port-thumb-placeholder" style="background:linear-gradient(135deg,#701a75,#86198f);">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="port-thumb-overlay"></div>
+                        <div class="port-thumb-content">
+                            <h5 class="port-thumb-title-sm">Fintech App</h5>
+                        </div>
+                    </div>
+                    <div class="port-card-footer">
+                        <span class="port-stack">React Native</span>
+                        <span class="port-metric-badge badge-pink">DESIGN</span>
+                    </div>
+                </div>
+
+                <div class="port-card port-small port-indigo" id="portCard5">
+                    <div class="port-thumb port-thumb-sm">
+                        <div class="port-thumb-placeholder" style="background:linear-gradient(135deg,#1e3a8a,#1e40af);">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="port-thumb-overlay"></div>
+                        <div class="port-thumb-content">
+                            <h5 class="port-thumb-title-sm">Retail Portal</h5>
+                        </div>
+                    </div>
+                    <div class="port-card-footer">
+                        <span class="port-stack">Laravel</span>
+                        <span class="port-metric-badge badge-indigo">WEB DEV</span>
+                    </div>
+                </div>
+
+                <div class="port-card port-small port-warning" id="portCard6">
+                    <div class="port-thumb port-thumb-sm">
+                        <div class="port-thumb-placeholder" style="background:linear-gradient(135deg,#7c2d12,#9a3412);">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="port-thumb-overlay"></div>
+                        <div class="port-thumb-content">
+                            <h5 class="port-thumb-title-sm">Social Campaign</h5>
+                        </div>
+                    </div>
+                    <div class="port-card-footer">
+                        <span class="port-stack">Retail Brand</span>
+                        <span class="port-metric-badge badge-warning">MARKETING</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-5 text-center portfolio-btn-trigger">
+                <div class="col-12">
+                    <a href="/portfolio" class="btn btn-outline-info px-5 py-3"
+                        style="border-radius: 30px; font-weight: 600; letter-spacing: 1px;">
+                        VIEW ALL PROJECTS <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 @endsection
