@@ -881,5 +881,127 @@
 
     </section>
 
+    <section class="premium-faq-section py-5">
+        <div class="ambient-flare flare-faq"></div>
+
+        <div class="container py-5">
+            <div class="row mb-5 text-center justify-content-center faq-header-trigger">
+                <div class="col-lg-7">
+                    <div class="agency-tag mx-auto mb-3">
+                        <span class="tag-pulse"></span>
+                        <span class="tag-text">FAQ</span>
+                    </div>
+                    <h2 class="section-giant-title">Frequently Asked <span class="neon-gradient">Questions</span></h2>
+                    <p class="section-sub-lead">Everything you need to know about working with us. Can't find the answer?
+                        Contact us directly.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 faq-grid-trigger">
+
+                <div class="col-lg-7 faq-list-col">
+                    <div class="faq-item faq-active" data-index="0">
+                        <div class="faq-header">
+                            <div class="faq-num">01</div>
+                            <span class="faq-question">What services does DIGI-ICONICS offer?</span>
+                            <span class="faq-chevron">+</span>
+                        </div>
+                        <div class="faq-body">
+                            <p>We offer end-to-end digital services including web development, mobile app development, SEO,
+                                digital marketing, social media management, UI/UX design, and branding — all under one roof.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-index="1">
+                        <div class="faq-header">
+                            <div class="faq-num">02</div>
+                            <span class="faq-question">How long does a typical project take?</span>
+                            <span class="faq-chevron">+</span>
+                        </div>
+                        <div class="faq-body">
+                            <p>Project timelines vary — a simple website takes 2-4 weeks, a full e-commerce platform 6-10
+                                weeks, and ongoing marketing campaigns run monthly. We always provide a clear timeline
+                                before starting.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-index="2">
+                        <div class="faq-header">
+                            <div class="faq-num">03</div>
+                            <span class="faq-question">Do you work with international clients?</span>
+                            <span class="faq-chevron">+</span>
+                        </div>
+                        <div class="faq-body">
+                            <p>Yes — we work with clients globally. We've delivered projects for brands in the UK, UAE, USA,
+                                and across Asia-Pacific. Communication happens via Slack, Zoom, or your preferred platform.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-index="3">
+                        <div class="faq-header">
+                            <div class="faq-num">04</div>
+                            <span class="faq-question">What is your pricing model?</span>
+                            <span class="faq-chevron">+</span>
+                        </div>
+                        <div class="faq-body">
+                            <p>We offer both fixed-price project packages and monthly retainer models. Every engagement
+                                starts with a free proposal call so we can scope and price accurately for your needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-index="4">
+                        <div class="faq-header">
+                            <div class="faq-num">05</div>
+                            <span class="faq-question">Do you provide post-launch support?</span>
+                            <span class="faq-chevron">+</span>
+                        </div>
+                        <div class="faq-body">
+                            <p>Absolutely. All projects include 30 days of free post-launch support. Beyond that, we offer
+                                affordable maintenance and growth retainer packages to keep your product performing.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-index="5">
+                        <div class="faq-header">
+                            <div class="faq-num">06</div>
+                            <span class="faq-question">Will my website be mobile friendly?</span>
+                            <span class="faq-chevron">+</span>
+                        </div>
+                        <div class="faq-body">
+                            <p>Every project we deliver is fully responsive and mobile-first. We test across all major
+                                devices and browsers to ensure a flawless experience for every user.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 faq-cta-col">
+                    <div class="faq-cta-panel">
+                        <div class="faq-cta-icon">?</div>
+                        <h4 class="faq-cta-title">Still have questions?</h4>
+                        <p class="faq-cta-desc">Our team is ready to answer anything. Book a free 30-min strategy call
+                            today.</p>
+                        <a href="#" class="prime-btn w-100 justify-content-center">
+                            <span>Get a Free Proposal</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="faq-email-card">
+                        <div class="faq-email-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="faq-email-label">Email us directly</div>
+                            <div class="faq-email-val">hello@digi-iconics.com</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
 @endsection

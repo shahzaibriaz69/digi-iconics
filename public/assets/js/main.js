@@ -484,3 +484,80 @@ document.addEventListener("DOMContentLoaded", function () {
         ScrollTrigger.refresh();
     }
 });
+
+
+// ==========================================================================
+// 12. FAQ SECTION - ACCORDION + SCROLLTRIGGER
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ---- Accordion Logic ----
+    var faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(function (item) {
+        var header = item.querySelector(".faq-header");
+        if (!header) return;
+
+        header.addEventListener("click", function () {
+            var isActive = item.classList.contains("faq-active");
+
+            // Close all
+            faqItems.forEach(function (i) {
+                i.classList.remove("faq-active");
+            });
+
+            // Open clicked (if wasn't already open)
+            if (!isActive) {
+                item.classList.add("faq-active");
+            }
+        });
+    });
+
+    // ---- ScrollTrigger ----
+    if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Heading
+        gsap.from(".faq-header-trigger > *", {
+            scrollTrigger: {
+                trigger: ".faq-header-trigger",
+                start: "top 85%",
+                toggleActions: "play none none none"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
+
+        // Left accordion items — from left, staggered
+        gsap.from(".faq-list-col .faq-item", {
+            scrollTrigger: {
+                trigger: ".faq-grid-trigger",
+                start: "top 82%",
+                toggleActions: "play none none none"
+            },
+            x: -80,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1,
+            ease: "power3.out"
+        });
+
+        // Right CTA panel — from right
+        gsap.from(".faq-cta-col", {
+            scrollTrigger: {
+                trigger: ".faq-grid-trigger",
+                start: "top 82%",
+                toggleActions: "play none none none"
+            },
+            x: 80,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+
+        ScrollTrigger.refresh();
+    }
+});
