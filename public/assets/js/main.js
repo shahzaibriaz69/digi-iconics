@@ -181,6 +181,162 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// ==========================================================================
+// 9. PROCESS SECTION - INTERACTIVE FUNNEL + SCROLLTRIGGER
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ---- Interactive Funnel ----
+    var labelEl  = document.getElementById("processStepLabel");
+    var titleEl  = document.getElementById("processTitle");
+    var descEl   = document.getElementById("processDesc");
+    var infoCard = document.querySelector(".process-active-info");
+    var arrowGrp = document.getElementById("processArrowGroup");
+    var layers   = document.querySelectorAll(".funnel-layer");
+
+    var defaultState = {
+        label : "STEP 01",
+        title : "Discovery",
+        desc  : "Understanding your goals, audience and market position before any work begins.",
+        color : "#818cf8",
+        y     : 88
+    };
+
+    function moveArrow(y) {
+        if (typeof gsap !== "undefined" && arrowGrp) {
+            gsap.to(arrowGrp, {
+                 y: y,
+    duration: 0.6,
+    ease: "power3.out"
+            });
+        }
+    }
+
+    function setContent(label, title, desc, color) {
+        if (labelEl) { labelEl.textContent = label; labelEl.style.color = color; }
+        if (titleEl) titleEl.textContent = title;
+        if (descEl)  descEl.textContent  = desc;
+    }
+
+    if (layers.length && arrowGrp) {
+        layers.forEach(function (layer) {
+            layer.addEventListener("mouseenter", function () {
+                setContent(
+                    layer.getAttribute("data-label"),
+                    layer.getAttribute("data-title"),
+                    layer.getAttribute("data-desc"),
+                    layer.getAttribute("data-color")
+                );
+                moveArrow(parseInt(layer.getAttribute("data-arrow-y"), 10));
+                var glowColor = layer.getAttribute("data-color");
+                if (infoCard) {
+    infoCard.style.borderColor = glowColor;
+    infoCard.style.boxShadow = "0 0 25px " + glowColor;
+}
+
+if (titleEl) {
+    titleEl.style.color = glowColor;
+}
+
+if (labelEl) {
+    labelEl.style.color = glowColor;
+}
+                layers.forEach(function (l) {
+                    gsap.to(l, {
+        opacity: 0.45,
+        duration: 0.35,
+        ease: "power2.out"
+    });
+                });
+                gsap.to(layer, {
+  scale: 1.06,
+    duration: 0.4,
+    ease: "back.out(1.7)"
+});
+gsap.to(layer, {
+    scale: 1,
+    duration: 0.3,
+    ease: "power2.out"
+});
+                layer.style.filter =
+      "drop-shadow(0 0 5px " + glowColor + ")" +
+    " drop-shadow(0 0 10px " + glowColor + ")";
+            });
+
+            layer.addEventListener("mouseleave", function () {
+                if (infoCard) {
+    infoCard.style.borderColor = "rgba(255,255,255,0.1)";
+    infoCard.style.boxShadow = "none";
+}
+
+if (titleEl) {
+    titleEl.style.color = "";
+}
+
+if (labelEl) {
+    labelEl.style.color = defaultState.color;
+}
+                layers.forEach(function (l) {
+                   gsap.to(l, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.35,
+        ease: "power2.out"
+    });
+    l.style.filter = "none";
+                });
+                setContent(defaultState.label, defaultState.title, defaultState.desc, defaultState.color);
+                moveArrow(defaultState.y);
+            });
+        });
+    }
+
+    // ---- ScrollTrigger Entrance Animation ----
+    if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".process-content-block", {
+            scrollTrigger: {
+                trigger: ".process-grid-trigger",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            x: -100,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power4.out"
+        });
+
+        gsap.from(".process-funnel-block", {
+            scrollTrigger: {
+                trigger: ".process-grid-trigger",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            x: 100,
+            scale: 0.9,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power4.out"
+        });
+
+        gsap.from(".funnel-layer", {
+            scrollTrigger: {
+                trigger: ".process-funnel-block",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            duration: 0.7,
+            stagger: 0.12,
+            delay: 0.3,
+            ease: "power3.out"
+        });
+
+        ScrollTrigger.refresh();
+    }
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     if (typeof ScrollTrigger !== "undefined") {
@@ -556,6 +712,59 @@ document.addEventListener("DOMContentLoaded", function () {
             opacity: 0,
             duration: 1.2,
             ease: "power3.out"
+        });
+
+        ScrollTrigger.refresh();
+    }
+});
+
+// ==========================================================================
+// 13. CTA SECTION - SCROLLTRIGGER CINEMATIC ENTRANCE
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Agency tag + heading + sub-lead — staggered pop up
+        gsap.from(".cta-content-trigger > *", {
+            scrollTrigger: {
+                trigger: ".cta-content-trigger",
+                start: "top 85%",
+                toggleActions: "play none none none"
+            },
+            y: 60,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
+
+        // Buttons scale pop-in
+        gsap.from(".cta-action-group .prime-btn, .cta-action-group .ghost-btn", {
+            scrollTrigger: {
+                trigger: ".cta-action-group",
+                start: "top 90%",
+                toggleActions: "play none none none"
+            },
+            scale: 0.85,
+            opacity: 0,
+            duration: 0.9,
+            stagger: 0.12,
+            ease: "back.out(1.7)"
+        });
+
+        // Trust badges fade in
+        gsap.from(".trust-badge", {
+            scrollTrigger: {
+                trigger: ".cta-trust-badges",
+                start: "top 92%",
+                toggleActions: "play none none none"
+            },
+            y: 20,
+            opacity: 0,
+            duration: 0.7,
+            stagger: 0.1,
+            ease: "power2.out"
         });
 
         ScrollTrigger.refresh();

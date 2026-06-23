@@ -2296,3 +2296,136 @@ a {
         margin-top: 20px;
     }
 }
+
+/* ==========================================================================
+   10 CTA SECTION - CENTERED FULL-WIDTH
+   ========================================================================== */
+.premium-cta-section {
+    position: relative;
+    background-color: #030712 !important;
+    padding: 120px 0;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Grid lines texture */
+.cta-grid-lines {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.flare-cta-blue {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(rgba(37, 99, 235, 0.2), transparent);
+    top: -150px;
+    left: -100px;
+    position: absolute;
+    z-index: -1;
+    filter: blur(80px);
+}
+
+.flare-cta-purple {
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(rgba(168, 85, 247, 0.16), transparent);
+    bottom: -100px;
+    right: -80px;
+    position: absolute;
+    z-index: -1;
+    filter: blur(80px);
+}
+
+.cta-content-trigger {
+    position: relative;
+    z-index: 2;
+}
+
+/* ---- Headline ---- */
+.cta-giant-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    letter-spacing: -1.5px;
+    margin-bottom: 22px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cta-sub-lead {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.75;
+    max-width: 520px;
+    margin: 0 auto 40px;
+}
+
+/* ---- Buttons ---- */
+.cta-action-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 44px;
+}
+
+.prime-btn-lg {
+    padding: 17px 40px !important;
+    font-size: 1rem !important;
+    border-radius: 14px !important;
+}
+
+.ghost-btn-lg {
+    padding: 17px 40px !important;
+    font-size: 1rem !important;
+    border-radius: 14px !important;
+    margin-left: 0 !important;
+}
+
+/* ---- Trust badges ---- */
+.cta-trust-badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #64748b;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.trust-badge i {
+    color: #4ade80;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .cta-giant-title {
+        font-size: 2.2rem;
+    }
+
+    .cta-trust-badges {
+        gap: 16px;
+    }
+
+    .cta-action-group {
+        flex-direction: column;
+    }
+
+    .ghost-btn-lg {
+        text-align: center;
+    }
+}

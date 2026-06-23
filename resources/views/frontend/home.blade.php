@@ -114,8 +114,6 @@
         </div>
     </section>
 
-
-
     <section class="premium-services-section py-5">
         <div class="ambient-flare flare-services"></div>
 
@@ -999,6 +997,59 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="premium-cta-section">
+        <div class="cta-grid-lines"></div>
+        <div class="ambient-flare flare-cta-blue"></div>
+        <div class="ambient-flare flare-cta-purple"></div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center cta-content-trigger">
+
+                    <div class="agency-tag mx-auto mb-4">
+                        <span class="tag-pulse"></span>
+                        <span class="tag-text">GET STARTED TODAY</span>
+                    </div>
+
+                    <h2 class="cta-giant-title">
+                        Ready to Scale Your<br>
+                        <span class="neon-gradient">Business Globally?</span>
+                    </h2>
+
+                    <p class="cta-sub-lead">
+                        Let's build something extraordinary together. Get a custom strategy proposal — free, no commitment.
+                    </p>
+
+                    <div class="cta-action-group">
+                        <a href="#" class="prime-btn prime-btn-lg">
+                            <span>Get Free Proposal</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="/portfolio" class="ghost-btn ghost-btn-lg">
+                            <span>View Portfolio</span>
+                        </a>
+                    </div>
+
+                    <div class="cta-trust-badges">
+                        <div class="trust-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Free Strategy Call</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>No Long-Term Contracts</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Results Guaranteed</span>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
