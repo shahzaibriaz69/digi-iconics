@@ -1,0 +1,97 @@
+/* ==========================================================================
+   NAVBAR IMPROVEMENTS
+   ========================================================================== */
+
+/* ---- Scroll effect ---- */
+.custom-navbar {
+    transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
+}
+
+.custom-navbar.nav-scrolled {
+    background: rgba(5, 8, 17, 0.96) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+}
+
+/* ---- Mega menu icon boxes ---- */
+.mega-header-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mega-icon-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.mega-icon-indigo {
+    background: rgba(99, 102, 241, 0.15);
+    color: #818cf8;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.mega-icon-warning {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.mega-icon-cyan {
+    background: rgba(34, 211, 238, 0.15);
+    color: #22d3ee;
+    border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.mega-title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0 !important;
+}
+
+/* ---- Custom hamburger ---- */
+.toggler-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 22px;
+}
+
+.toggler-icon span {
+    display: block;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animated X on open */
+.custom-toggler[aria-expanded="true"] .toggler-icon span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.custom-toggler[aria-expanded="true"] .toggler-icon span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.custom-toggler[aria-expanded="true"] .toggler-icon span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---- Active nav link indicator ---- */
+.custom-navbar .nav-link.active::after {
+    width: calc(100% - 32px) !important;
+}
